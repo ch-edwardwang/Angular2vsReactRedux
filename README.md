@@ -22,6 +22,7 @@ Edits, comments, and insight are welcome.
 - Class-based, single inheritance, object-oriented language with C-style Syntax which can be transcompiled into JS.
 
 ### AngularJS 2
+[ insert picture of how these 8 things fit together ]
 - Composed of 8 building blocks
  - Modules `// Functionally the root node of a set of components/services.`
  - Components `// Controller to a view`
