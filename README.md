@@ -1,5 +1,5 @@
 # AngularJS 2.x vs React + Redux
-(Edit date: Oct 17, 2016)
+(Edit date: Oct 26, 2016)
 
 This is a comparison of AngularJS 2 and React + Redux. The purpose of this comparison is to see the pros and cons of each framework.
 
