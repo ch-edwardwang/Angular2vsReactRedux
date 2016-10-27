@@ -31,4 +31,17 @@ Edits, comments, and insight are welcome.
  - Directives `// Attributes on an HTML element`
  - Services `// A class with a narrow, well-defined purpose`
  - Dependency injection `// Which components/modules are needed`
+ 
+
+## React
+- https://facebook.github.io/react/
+
+### Languages 
+- JSX and Vinilla JavaScript.
+
+#### JSX
+- React's version of html (camelCase instead of snake-case)
+- JSX is treated like a JS object after compilation
+
+
 
