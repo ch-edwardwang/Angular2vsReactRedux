@@ -1,59 +1,48 @@
-# Angular 2.x vs React + Redux
-(Edit date: Oct 17, 2016)
+# AngularJS 2.x vs React + Redux
+(Edit date: Oct 26, 2016)
 
-This is a comparison of Angular 2 and React + Redux. The purpose of this comparison is to see the pros and cons of each framework.
+This is a comparison of AngularJS 2 and React + Redux. The purpose of this comparison is to see the pros and cons of each framework.
 
 Edits, comments, and insight are welcome.
 
-## Angular 2.x
+## AngularJS 2
+- https://angular.io/
 
 ### Languages 
-- Angular 2 can be written in TypeScript, Dart, or Vinilla JavaScript.
+- AngularJS 2 can be written in TypeScript, Dart, or Vinilla JavaScript.
 
 #### TypeScript
+- www.typescriptlang.org
 - TypeScript ⊇ JavaScript
-- IDE support (Atom, Eclipse, Sublime, Visual Studio, Webstorm...).
-- `$ tsc helloWorld.ts` to compile to plain JS. Code will be analyzed for mistakes during compile time.
-- Supports Enums
-```
-function greeter(person: string) {
-    return "Hello, " + person;
-}
-let isDone: boolean = false;
-let decimal: number = 6;
-let hex: number = 0xf00d;
-let binary: number = 0b1010;
-let octal: number = 0o744;
-let color: string = "blue";
-```
+- Mistakes can be found during transpilation.
+
 #### DART
+- www.dartlang.org
 - General purpose programming language.
 - Class-based, single inheritance, object-oriented language with C-style Syntax which can be transcompiled into JS.
-```
-import 'dart:async';
-import 'dart:math' show Random;
 
-main() async {
-  print('Compute π using the Monte Carlo method.');
-  await for (var estimate in computePi()) {
-    print('π ≅ $estimate');
-  }
-}
-```
+### AngularJS 2
+[ insert picture of how these 8 things fit together ]
+- Composed of 8 building blocks
+ - Modules `// Functionally the root node of a set of components/services.`
+ - Components `// Controller to a view`
+ - Templates `// HTML`
+ - Metadata `// decorators, which help angular understand a component/module`
+ - Data binding `// The way which the DOM & Component communicate`
+ - Directives `// Attributes on an HTML element`
+ - Services `// A class with a narrow, well-defined purpose`
+ - Dependency injection `// Which components/modules are needed`
+ 
 
-### Angular 2 Hello World
-- Components manages a view.
-```
-(function(app) {
-  app.AppComponent =
-    ng.core.Component({
-      selector: 'my-app',
-      template: '<h1>My First Angular App</h1>'
-    })
-    .Class({
-      constructor: function() {}
-    });
-})(window.app || (window.app = {}));
-```
+## React
+- https://facebook.github.io/react/
 
-- Modules consolidate components, directives, and pipes into a cohesive block of functionality.
+### Languages 
+- JSX and Vinilla JavaScript.
+
+#### JSX
+- React's version of html (camelCase instead of snake-case)
+- JSX is treated like a JS object after compilation
+
+
+
