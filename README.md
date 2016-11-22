@@ -78,3 +78,55 @@ Edits, comments, and insight are welcome.
 
 ##### Thinking in React / thinking in components
 - A great resouce for thinking in components based off of UI [https://facebook.github.io/react/docs/thinking-in-react.html]
+
+### Redux
+- Get away from the complexity of mixing two concepts that are very hard for the human mind to reason about: mutation and asynchronicity.
+
+#### Single Source of Truth
+- Remember how each component in React had it's own state? Well not anymore!
+- The whole state of your app is stored in a single object tree inside a single store.
+- The only way to change the state tree is to emit an action (an obj which describes what happened)
+- The way these actions transform the state tree is via pure reducers which you write.
+```
+{
+  selectedSubreddit: 'frontend',
+  postsBySubreddit: {
+    frontend: {
+      isFetching: true,
+      didInvalidate: false,
+      items: []
+    },
+    reactjs: {
+      isFetching: false,
+      didInvalidate: false,
+      lastUpdated: 1439478405547,
+      items: [
+        {
+          id: 42,
+          title: 'Confusion about Flux and Relay'
+        },
+        {
+          id: 500,
+          title: 'Creating a Simple Application Using React JS and Flux Architecture'
+        }
+      ]
+    }
+  }
+}
+```
+#### State is read-only
+- The only way to change the state is to emit an action.
+- This ensures that neither the views nor the network callbacks will ever write directly to the state. Because all changes are centralized and happen one by one in a strict order, there are no subtle race conditions to watch out for. As actions are just plain objects, they can be logged, serialized, stored, and later replayed for debugging or testing purposes.
+
+#### Changes are made with pure functions
+- Pure functions will have the same result for a given input at any point. They are not effected by outside elements and don't mutate the arguments which are passed in.
+
+#### Middleware
+- In most frameworks, middleware is some code you can put between the framework receiving a request, and the framework generating a response.
+- Redux middleware provides a third-party extension point between dispatching an action, and the moment it reaches the reducer. People use Redux middleware for logging, crash reporting, talking to an asynchronous API, routing, and more.
+
+#### Async Actions (API)
+- Use [Redux Thunk middleware](https://github.com/gaearon/redux-thunk)
+- Or use [Redux Promise middleware](https://github.com/acdlite/redux-promise)
+
+##### [React + Redux example app](http://redux.js.org/docs/advanced/ExampleRedditAPI.html)
