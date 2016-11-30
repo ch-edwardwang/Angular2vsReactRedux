@@ -7,4 +7,4 @@ const AddPerson = (person) => {
   };
 }
 
-export default AddPerson
+export default AddPerson;

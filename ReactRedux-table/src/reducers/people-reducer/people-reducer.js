@@ -1,6 +1,6 @@
 import { Types } from 'actions';
 
-export default (state = [], action) => {
+const people = (state = [], action) => {
   switch (action.type) {
     case Types.ADD_PERSON:
       return [...state, Object.assign({}, action.person)];
@@ -8,3 +8,5 @@ export default (state = [], action) => {
       return state;
   }
 };
+
+export default people
