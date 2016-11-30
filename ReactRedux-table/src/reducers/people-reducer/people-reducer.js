@@ -1,21 +1,21 @@
 import { Types } from 'actions';
 
-const people = (state = {}, action) => {
-  switch (action.type) {
-    case Types.ADD_PERSON:
-      return [...state, Object.assign({}, action.person)];
-    default:
-      return state;
-  }
-};
+// const people = (state = {}, action) => {
+//   switch (action.type) {
+//     case Types.ADD_PERSON:
+//       return [...state, Object.assign({}, action.person)];
+//     default:
+//       return state;
+//   }
+// };
 
 const fetchedPeople = (state = {
     isFetching: false,
     didInvalidate: false,
-    peopleIds: []
+    people: []
   }, action ) => {
   switch (action.type) {
-    case Types.FETCH_PEOPLE:
+    case Types.REQUEST_PEOPLE:
       return Object.assign({}, state, {
         isFetching: true,
         didInvalidate: false
@@ -24,7 +24,7 @@ const fetchedPeople = (state = {
       return Object.assign({}, state, {
         isFetching: false,
         didInvalidate: false,
-        peopleIds: action.peopleIds,
+        people: action.people,
         lastUpdated: action.receivedAt
       })
     default:
@@ -33,6 +33,6 @@ const fetchedPeople = (state = {
 };
 
 export {
- people,
+ // people,
  fetchedPeople
 }

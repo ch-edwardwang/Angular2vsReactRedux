@@ -7,11 +7,13 @@
 
 
 import * as Types from './action-types/action-types';
-import { AddPerson, FetchPeople } from './people-actions/people-actions'
+import { addPerson, fetchPeople, receivePeople, requestPeople } from './people-actions/people-actions'
 
 
 export {
-  Types,
-  AddPerson,
-  FetchPeople
+  addPerson,
+  fetchPeople,
+  requestPeople,
+  receivePeople,
+  Types
 }
