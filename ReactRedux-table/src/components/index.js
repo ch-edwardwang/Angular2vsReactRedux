@@ -6,8 +6,10 @@
  */
 
 
+import PeopleTable from './PeopleTable/PeopleTable';
 import Person from './Person/Person';
 
 export {
+  PeopleTable,
   Person
 }

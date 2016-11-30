@@ -5,12 +5,8 @@
  *
  */
 
-import PeopleList from './PeopleList/PeopleList';
-import PeopleContainer from './PeopleContainer/PeopleContainer';
-import PersonInput from './PersonInput/PersonInput';
+import PeopleTableContainer from './PeopleTableContainer/PeopleTableContainer';
 
 export {
-  PeopleContainer,
-  PeopleList,
-  PersonInput
+  PeopleTableContainer
 }

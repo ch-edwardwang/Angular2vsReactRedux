@@ -28,7 +28,7 @@ module.exports = {
       CONTEXT,
       'node_modules'
     ],
-    extensions: ['', '.js', '.json'],
+    extensions: ['', '.js', '.json', '.scss'],
     alias: {
       // This `alias` section can be safely removed after ejection.
       // We do this because `babel-runtime` may be inside `react-scripts`,

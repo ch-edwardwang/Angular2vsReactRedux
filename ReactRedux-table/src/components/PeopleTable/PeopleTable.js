@@ -1,9 +1,15 @@
 import React, {PropTypes} from 'react';
 import { Person } from 'components';
 
-const PeopleList = ({people}) => {
+const PeopleTable = ({people}) => {
+  const styles = {
+    tableWrapper: {
+      margin: '60px'
+    }
+  };
+
   return (
-    <div>
+    <div style={styles.tableWrapper} >
       {people.map((person) =>
         <Person key={person.lastname} person={person} />
       )}
@@ -11,8 +17,8 @@ const PeopleList = ({people}) => {
   );
 };
 
-PeopleList.propTypes = {
+PeopleTable.propTypes = {
   people: PropTypes.array.isRequired
 };
 
-export default PeopleList;
+export default PeopleTable;

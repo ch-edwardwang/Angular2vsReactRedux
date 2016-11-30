@@ -1,8 +1,15 @@
 import React, {PropTypes} from 'react';
 
 const Person = ({person}) => {
+  const styles = {
+    fullName: {
+      padding: '5px',
+      color: 'black'
+    }
+  };
+
   return (
-    <div>
+    <div style={styles.fullName} >
       {person.lastname}, {person.firstname}
     </div>
   );
