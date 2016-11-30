@@ -1,12 +1,31 @@
-# `create-react-app` ... with Redux
+Define the State Shape
 
-This is a barebones implementation of Redux with a React app that was generated with `create-react-app`, and then ejected with `npm run eject`.
 
-:bulb: This repository consists of two commits and only two commits.  
-
- 1. **first commit** is the base code of a `create-react-app` app source code after eject (`npm run eject`)
- 2. **second commit** are the sample additions to implement basic redux
-
-:bulb: :bulb: It is worth noting that it is **not** required to run `npm run eject` in order to get Redux implemented in this app.  Implementing Redux in the app without ejecting is completely possible
-
-![demo](images/demo.gif)
+Normalized data, in case users want to edit people without doing a complete fetch
+```
+{
+  people: {
+    1: {
+      id: 1,
+      first_name: ed1,
+      last_name: wang1
+    },
+    2: {
+      id: 2,
+      first_name: ed2,
+      last_name: wang2
+    },
+    3: {
+      id: 3,
+      first_name: ed3,
+      last_name: wang3
+    }
+  },
+  fetchedPeople: {
+    isFetching: false,          // For showing a spinner
+    didInvalidate: false,       // to show that data is stale
+    lastUpdated: 1439478405547, // time which the API was called
+    peopleIds: [ 1, 2, 3 ]
+  }
+}
+```

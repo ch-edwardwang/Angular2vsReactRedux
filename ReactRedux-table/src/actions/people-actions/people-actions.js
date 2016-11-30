@@ -7,4 +7,22 @@ const AddPerson = (person) => {
   };
 }
 
-export default AddPerson;
+const FetchPeople = () => {
+  return {
+    type: types.FETCH_PEOPLE
+  };
+}
+
+const ReceivePeople = (json) => {
+  return {
+    type: types.RECIEVE_PEOPLE,
+    people: json.data,
+    receivedAt: Date.now()
+  }
+}
+
+export {
+  AddPerson,
+  FetchPeople,
+  ReceivePeople
+}

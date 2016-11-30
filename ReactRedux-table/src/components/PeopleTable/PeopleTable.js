@@ -4,7 +4,7 @@ import { Person } from 'components';
 const PeopleTable = ({people}) => {
   const styles = {
     tableWrapper: {
-      margin: '60px'
+      margin: '10px'
     }
   };
 
