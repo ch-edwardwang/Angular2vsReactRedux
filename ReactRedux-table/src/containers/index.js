@@ -6,7 +6,9 @@
  */
 
 import PeopleTableContainer from './PeopleTableContainer/PeopleTableContainer';
+import DevTools from './DevTools/DevTools';
 
 export {
-  PeopleTableContainer
+  PeopleTableContainer,
+  DevTools
 }

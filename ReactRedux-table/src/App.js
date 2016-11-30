@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { PeopleTableContainer } from 'containers';
+import { PeopleTableContainer, DevTools } from 'containers';
 
 class App extends Component {
   render() {
@@ -22,6 +22,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Table.</h2>
           <PeopleTableContainer people={people} />
+          <DevTools />
         </div>
       </div>
     );

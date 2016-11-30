@@ -8,8 +8,10 @@
 
 import PeopleTable from './PeopleTable/PeopleTable';
 import Person from './Person/Person';
+import PersonInput from './PersonInput/PersonInput';
 
 export {
   PeopleTable,
-  Person
+  Person,
+  PersonInput
 }
