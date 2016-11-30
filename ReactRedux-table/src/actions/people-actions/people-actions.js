@@ -13,9 +13,6 @@ const requestPeople = () => {
   }
 }
 
-
-
-
 const receivePeople = (json) => {
   return {
     type: types.RECIEVE_PEOPLE,
