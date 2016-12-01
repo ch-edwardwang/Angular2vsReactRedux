@@ -10,7 +10,7 @@ const Person = ({person}) => {
 
   return (
     <div style={styles.fullName} >
-      {person.lastname}, {person.firstname}
+      {person.name}, {person.phone}, {person.email}
     </div>
   );
 };

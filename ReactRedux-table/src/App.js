@@ -10,18 +10,18 @@ class App extends Component {
     // To be replaced Redux action which stores
     // it's results in Redux State.
     // Also using with Redux-Thunk/Redux-Promise.
-    const people = [
-      { firstname: 'Ed1', lastname: 'Wang1' },
-      { firstname: 'Ed2', lastname: 'Wang2' },
-      { firstname: 'Ed3', lastname: 'Wang3' }
-    ];
+    // const people = [
+    //   { firstname: 'Ed1', lastname: 'Wang1' },
+    //   { firstname: 'Ed2', lastname: 'Wang2' },
+    //   { firstname: 'Ed3', lastname: 'Wang3' }
+    // ];
 
     return (
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
         </div>
-        <PeopleTableContainer people={people} />
+        <PeopleTableContainer />
         <DevTools />
       </div>
     );

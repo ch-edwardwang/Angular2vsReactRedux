@@ -11,7 +11,7 @@ const PeopleTable = ({people}) => {
   return (
     <div style={styles.tableWrapper} >
       {people.map((person) =>
-        <Person key={person.lastname} person={person} />
+        <Person key={person.id} person={person} />
       )}
     </div>
   );
