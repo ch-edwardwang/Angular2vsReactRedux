@@ -1,8 +1,8 @@
 import React, { /*PropTypes,*/ Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { PeopleTable } from 'components';
-import { fetchPeople } from 'actions';
+import { PeopleTable, PersonInput } from 'components';
+import { fetchPeople, addPerson } from 'actions';
 
 class PeopleTableContainer extends Component {
   constructor(props) {
@@ -14,7 +14,7 @@ class PeopleTableContainer extends Component {
   }
 
   componentDidMount() {
-    this.props.fetchPeople();
+    this.props.actions.fetchPeople();
   }
 
   render() {
@@ -22,6 +22,7 @@ class PeopleTableContainer extends Component {
 
     return (
       <div>
+        <PersonInput addPerson={this.props.actions.addPerson} />
         {people ? <PeopleTable people={people} /> : null }
       </div>
     );
@@ -52,9 +53,11 @@ var mapStateToProps = (state) => {
 }
 var mapDispatchToProps = (dispatch) => {
   return {
-    fetchPeople: bindActionCreators(fetchPeople, dispatch)
+    actions: {
+      fetchPeople: bindActionCreators(fetchPeople, dispatch),
+      addPerson: bindActionCreators(addPerson, dispatch)
+    }
   }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(PeopleTableContainer);
-// export default PeopleTableContainer;

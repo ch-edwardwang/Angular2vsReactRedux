@@ -6,8 +6,6 @@ import './index.css';
 import {Provider} from 'react-redux';
 import configureStore from './store/configure-store';
 
-// import { fetchPeople }  from 'actions';
-
 const store = configureStore();
 
 ReactDOM.render(
@@ -16,7 +14,3 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 );
-
-// store.dispatch(fetchPeople()).then(() =>
-//   console.log(store.getState())
-// )

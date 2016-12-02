@@ -7,21 +7,29 @@ const addPerson = (person) => {
   };
 }
 
+const addPeople = (people) => {
+  return {
+    type: types.ADD_PEOPLE,
+    people
+  };
+}
+
 const requestPeople = () => {
   return {
     type: types.REQUEST_PEOPLE
   }
 }
 
-const receivePeople = (json) => {
+const receivePeople = (people) => {
   return {
     type: types.RECIEVE_PEOPLE,
-    people: json,
+    people: people,
     receivedAt: Date.now()
   }
 }
 
 const fetchPeople = () => {
+
   // Thunk middleware knows how to handle functions.
   // It passes the dispatch method as an argument to the function,
   // thus making it able to dispatch actions itself.
@@ -41,12 +49,14 @@ const fetchPeople = () => {
 
     return fetch(`https://jsonplaceholder.typicode.com/users`)
       .then(response => response.json())
-      .then(json =>
+      .then(people => {
 
-        // We can dispatch many times!
-        // Here, we update the app state with the results of the API call.
+          // We can dispatch many times!
+          // Here, we update the app state with the results of the API call.
 
-        dispatch(receivePeople(json))
+          dispatch(receivePeople(people));
+          dispatch(addPeople(people));
+        }
       )
 
       // In a real world app, you also want to
@@ -56,6 +66,7 @@ const fetchPeople = () => {
 
 export {
   addPerson,
+  addPeople,
   fetchPeople,
   receivePeople,
   requestPeople
