@@ -9,7 +9,7 @@ class PeopleTableContainer extends Component {
     super(props);
 
     this.state = {
-      people: []
+      people: {}
     };
   }
 
@@ -18,37 +18,20 @@ class PeopleTableContainer extends Component {
   }
 
   render() {
-    const { people } = this.props;
+    const { people, actions } = this.props;
 
     return (
       <div>
-        <PersonInput addPerson={this.props.actions.addPerson} />
-        {people ? <PeopleTable people={people} /> : null }
+        <PersonInput addPerson={actions.addPerson} />
+        {people ? <PeopleTable {...people} /> : null }
       </div>
     );
   }
 }
 
-// PeopleTableContainer.propTypes = {
-//   people: PropTypes.array.isRequired
-// };
-
-// TODO: adding filter to the table
-// const getVisiblePeople = (people, filter) => {
-//   switch (filter) {
-//     case 'SHOW_ALL':
-//       return people
-//     case 'SHOW_ALIVE':
-//       return people.filter(t => t.alive)
-//     case 'SHOW_DEAD':
-//       return people.filter(t => !t.alive)
-//   }
-// }
-
 var mapStateToProps = (state) => {
   return {
-    // people: getVisiblePeople(state.people, state.visibilityFilter)
-    people: state.fetchedPeople.people
+    people: state.people
   };
 }
 var mapDispatchToProps = (dispatch) => {

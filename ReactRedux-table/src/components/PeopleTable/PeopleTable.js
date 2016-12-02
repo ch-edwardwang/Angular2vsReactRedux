@@ -1,7 +1,8 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
 import { Person } from 'components';
+import _ from 'lodash';
 
-const PeopleTable = ({people}) => {
+const PeopleTable = (people) => {
   const styles = {
     tableWrapper: {
       margin: '10px'
@@ -10,15 +11,11 @@ const PeopleTable = ({people}) => {
 
   return (
     <div style={styles.tableWrapper} >
-      {people.map((person) =>
-        <Person key={person.id} person={person} />
+      {_.map(people, (person, id) =>
+        <Person key={id} person={person} />
       )}
     </div>
   );
-};
-
-PeopleTable.propTypes = {
-  people: PropTypes.array.isRequired
 };
 
 export default PeopleTable;
