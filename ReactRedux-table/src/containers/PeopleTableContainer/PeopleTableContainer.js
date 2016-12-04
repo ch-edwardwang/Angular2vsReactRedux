@@ -1,7 +1,7 @@
 import React, { /*PropTypes,*/ Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { PeopleTable, PersonInput } from 'components';
+import { PeopleTable, PersonInput } from 'presenters';
 import { fetchPeople, addPerson } from 'actions';
 
 class PeopleTableContainer extends Component {

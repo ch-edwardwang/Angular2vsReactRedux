@@ -4,9 +4,12 @@ class PersonInput extends Component {
   constructor(props) {
     super(props);
 
+    // This binding is necessary to make `this` work in the callback
     this.onAddPersonClick = this.onAddPersonClick.bind(this);
   }
 
+  // TODO: Replace with state and handler
+  // No direct DOM manipulation....
   onAddPersonClick() {
     this.props.addPerson({
       id: this.pId.value,

@@ -1,7 +1,7 @@
 /**
  *  Point of contact for component modules
  *
- *  ie: import { Person } from 'components';
+ *  ie: import { Person } from 'presenters';
  *
  */
 

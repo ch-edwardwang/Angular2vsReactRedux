@@ -1,5 +1,5 @@
 import React from 'react';
-import { Person } from 'components';
+import { Person } from 'presenters';
 import _ from 'lodash';
 
 const PeopleTable = (people) => {
