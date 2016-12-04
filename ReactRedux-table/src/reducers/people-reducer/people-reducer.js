@@ -18,19 +18,16 @@ const people = (state = {}, action) => {
 
 const fetchedPeople = (state = {
     isFetching: false,
-    didInvalidate: false,
     peopleIds: []
   }, action ) => {
   switch (action.type) {
     case Types.REQUEST_PEOPLE:
       return {...state,
-        isFetching: true,
-        didInvalidate: false
+        isFetching: true
       }
     case Types.RECIEVE_PEOPLE:
       return {...state,
         isFetching: false,
-        didInvalidate: false,
         peopleIds: _.map(action.people, 'id'),
         lastUpdated: action.receivedAt
       }

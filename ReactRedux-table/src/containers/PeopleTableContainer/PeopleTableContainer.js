@@ -34,6 +34,7 @@ var mapStateToProps = (state) => {
     people: state.people
   };
 }
+
 var mapDispatchToProps = (dispatch) => {
   return {
     actions: {

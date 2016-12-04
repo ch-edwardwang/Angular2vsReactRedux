@@ -7,6 +7,7 @@ class PersonInput extends Component {
     this.onAddPersonClick = this.onAddPersonClick.bind(this);
   }
 
+// TODO: clean up this controller
   onAddPersonClick() {
     const pIdElement = document.getElementById('personId');
     const nameElement = document.getElementById('name');
