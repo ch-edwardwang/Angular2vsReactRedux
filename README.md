@@ -31,7 +31,7 @@ Edits, comments, and insight are welcome.
  - Metadata `// decorators, which help angular understand a component/module`
  - Data binding `// The way which the DOM & Component communicate`
  - Directives `// Attributes on an HTML element`
- - Services `// A class with a narrow, well-defined purpose`
+ - Services `// A class with a narrow, well-defined purpose EX: API call`
  - Dependency injection `// Which components/modules are needed`
  
 
